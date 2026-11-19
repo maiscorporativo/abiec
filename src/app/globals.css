@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7f4;
+  --foreground: #211f23;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+/* Paleta ABIEC
+   verde institucional #6ba63d · azul institucional #123f6d
+   azul claro #0095eb · grafite #211f23
+
+   Os nomes das rampas (brand/sun/ember) são os mesmos do sistema de origem,
+   de propósito: só os valores mudam, então nenhum componente precisou ser
+   reescrito para trocar a identidade visual. */
+@theme {
+  /* verde ABIEC — cor primária */
+  --color-brand-50: #f2f8ec;
+  --color-brand-100: #e2f0d5;
+  --color-brand-200: #c6e1ac;
+  --color-brand-300: #a5cf7e;
+  --color-brand-400: #86bb56;
+  --color-brand-500: #6ba63d;
+  --color-brand-600: #558631;
+  --color-brand-700: #426727;
+  --color-brand-800: #34521f;
+  --color-brand-900: #253b16;
+
+  /* azul institucional ABIEC — cor de apoio (cabeçalhos, dados, links) */
+  --color-sun-50: #eef3f9;
+  --color-sun-100: #dbe6f1;
+  --color-sun-300: #7ba3c9;
+  --color-sun-400: #24517f;
+  --color-sun-500: #123f6d;
+  --color-sun-600: #0e3258;
+
+  /* azul claro — destaques e estados informativos */
+  --color-ember-50: #e6f4fe;
+  --color-ember-100: #cce9fd;
+  --color-ember-500: #0095eb;
+  --color-ember-600: #007cc3;
+  --color-ember-700: #00639c;
+
+  /* grafite ABIEC */
+  --color-graphite-500: #32373f;
+  --color-graphite-700: #211f23;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: #c6e1ac;
+}
